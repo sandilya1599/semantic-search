@@ -1,16 +1,16 @@
-# Word2Vec Model Project
+# Semantic Search with Word2Vec Project
 
-A modular, production-ready pipeline for training and using CBOW and SkipGram word embedding models on PDF document corpora, with semantic search capabilities.
+A modular, production-ready pipeline for building a semantic search engine using CBOW and SkipGram word embedding models trained on PDF document corpora.
 
 ## Features
+- **Semantic Search:** Find and rank similar sentences or queries using vector space similarity (cosine similarity) over learned embeddings.
 - **PDF Document Ingestion:** Reads and processes PDF files from a directory.
 - **Text Preprocessing:** Cleans, tokenizes, and lemmatizes text using NLTK and Stanza.
 - **Vocabulary Building:** Efficiently builds a vocabulary with frequency counts.
 - **ID Mapping:** Maps words to unique IDs and vice versa.
 - **Training Pipelines:**
   - CBOW and SkipGram model training scripts with configurable hyperparameters.
-- **Embedding Generation:** Generates and saves sentence/corpus embeddings.
-- **Semantic Search:** Finds similar sentences using cosine similarity in embedding space.
+- **Embedding Generation:** Generates and saves sentence/corpus embeddings for fast search.
 - **Configurable:** All paths and hyperparameters are managed in `config.py`.
 
 ## Project Structure
@@ -68,7 +68,7 @@ word2vec-model/
    ```bash
    python main.py
    ```
-   Enter your query when prompted.
+   Enter your query when prompted. The system will return the most semantically similar sentences from your corpus.
 
 ## Configuration
 All paths and hyperparameters are set in `config.py`:
