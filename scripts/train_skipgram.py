@@ -9,7 +9,7 @@ from nltk.stem import PorterStemmer
 from utils.train_pipeline import get_tokenized_corpus
 from models.model import SkipGramModel
 from utils.vocab_utils import build_vocab
-from utils.dataset_utils import generate_skip_gram_train_set
+from utils.dataset_utils import generate_training_set
 from utils.map_utils import create_mappings, build_id_sequences
 import nltk
 from nltk.stem import WordNetLemmatizer
@@ -74,7 +74,7 @@ def prepare_data(corpus_path, window_size):
     vocab = build_vocab(tokenized_corpus)
     word2id, id2word = create_mappings(vocab=vocab)
     id_seq = build_id_sequences(tokenized_corpus, word2id)
-    context_ids, target_ids = generate_skip_gram_train_set(id_seq, window_size)
+    context_ids, target_ids = generate_training_set(id_seq, window_size)
     return context_ids, target_ids, word2id, id2word
 
 def train_and_save(context_ids, target_ids, word2id, id2word, embedding_dim, device, batch_size, epochs):
