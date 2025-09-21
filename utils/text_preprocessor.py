@@ -1,7 +1,6 @@
 import re
 import nltk
 from nltk.stem import WordNetLemmatizer
-from nltk.corpus import wordnet
 import stanza
 from typing import Iterator, List
 

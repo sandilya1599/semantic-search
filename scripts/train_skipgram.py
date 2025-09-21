@@ -7,13 +7,12 @@ from torch.utils.data import TensorDataset, DataLoader
 import torch.nn.functional as F
 from nltk.stem import PorterStemmer
 from utils.train_pipeline import get_tokenized_corpus
-from models.model import CBOWModel, SkipGramModel
+from models.model import SkipGramModel
 from utils.vocab_utils import build_vocab
 from utils.dataset_utils import generate_skip_gram_train_set
 from utils.map_utils import create_mappings, build_id_sequences
 import nltk
 from nltk.stem import WordNetLemmatizer
-from nltk.corpus import wordnet
 import os
 from config import CORPUS_PATH, EMBEDDING_DIM, WINDOW_SIZE, BATCH_SIZE, EPOCHS
 
