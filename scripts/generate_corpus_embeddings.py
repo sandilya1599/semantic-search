@@ -1,6 +1,3 @@
-import pickle
-import torch
-from models.model import CBOWModel
 from utils.train_pipeline import get_tokenized_corpus
 from semantic_search.search import embed_corpus, save_corpus_embeddings
 from utils.model_utils import load_vocab, load_model
